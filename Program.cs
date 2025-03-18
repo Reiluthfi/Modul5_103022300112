@@ -1,4 +1,3 @@
-﻿
 class program
 {
     class SimpleDataBase<T>
@@ -21,6 +20,28 @@ class program
             {
                 Console.WriteLine($"Data {i+1} berisi : " +storedData[i] + ", yang disimpan pada waktu UTC:" + inputDates[i]);
             }
+    class PemrosesData
+    {
+        public void DapatkanNilaiTerbesar<T>(T data1, T data2, T data3)
+        {
+            dynamic nilaiTerbesar = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                if (data1 > nilaiTerbesar)
+                {
+                    nilaiTerbesar = data1;
+                }
+                if (data2 > nilaiTerbesar)
+                {
+                    nilaiTerbesar = data2;
+                }
+                if (data3 > nilaiTerbesar)
+                {
+                    nilaiTerbesar = data3;
+                }
+            }
+            Console.WriteLine(nilaiTerbesar);
+          
         }
     }
     static void Main()
@@ -30,5 +51,9 @@ class program
         db.AddNewData(34);
         db.AddNewData(56);
         db.PrintAllData();
+
+        PemrosesData datas = new PemrosesData();
+        datas.DapatkanNilaiTerbesar<float>(10, 30, 22);
+        
     }
 }
