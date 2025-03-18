@@ -26,7 +26,7 @@
     static void Main()
     {
         PemrosesData datas = new PemrosesData();
-        datas.DapatkanNilaiTerbesar<float>(11, 35, 36);
+        datas.DapatkanNilaiTerbesar<float>(10, 30, 22);
         
     }
 }
